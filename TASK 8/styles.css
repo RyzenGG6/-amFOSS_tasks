@@ -1,0 +1,181 @@
+body {
+
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: #DBEDF3;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-5deg);
+  }
+
+  20% {
+    transform: rotate(3deg);
+  }
+
+  30% {
+    transform: rotate(-3deg);
+  }
+
+  40% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  60% {
+    transform: rotate(-1deg);
+  }
+
+  70% {
+    transform: rotate(1deg);
+  }
+
+  80% {
+    transform: rotate(-1deg);
+  }
+
+  90% {
+    transform: rotate(1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wiggle:hover {
+  animation: wiggle 2s infinite;
+
+}
+
+
+#w {
+  font-family: 'Andika', sans-serif;
+  background-color: rgb(241, 144, 74);
+
+}
+
+#w:hover {
+  background-color: rgb(106, 114, 238);
+
+  box-shadow: 10px 5px 5px red;
+}
+
+#a {
+  font-family: 'Andika', sans-serif;
+  background-color: rgb(220, 213, 20);
+
+}
+
+#a:hover {
+  background-color: rgb(170, 44, 238);
+
+  box-shadow: 10px 5px 5px rgb(16, 16, 243);
+}
+
+#s {
+  background-color: chartreuse;
+  font-family: 'Andika', sans-serif;
+
+}
+
+#s:hover {
+  background-color: rgb(103, 95, 245);
+
+  box-shadow: 10px 5px 5px rgb(216, 14, 252);
+
+}
+
+#d {
+  background-color: #404B69;
+  font-family: 'Andika', sans-serif;
+}
+
+#d:hover {
+  background-color: rgb(63, 38, 19);
+
+  box-shadow: 10px 5px 5px rgb(239, 232, 9);
+}
+
+#j {
+  background-color: bisque;
+  font-family: 'Andika', sans-serif;
+}
+
+#j:hover {
+  background-color: rgb(244, 216, 54);
+
+  box-shadow: 10px 5px 5px rgb(243, 16, 84);
+}
+
+#k {
+  background-color: rgb(241, 62, 250);
+  font-family: 'Andika', sans-serif;
+}
+
+#k:hover {
+  background-color: rgb(205, 207, 68);
+
+  box-shadow: 10px 5px 5px rgb(243, 92, 16);
+}
+
+#l {
+  background-color: dimgrey;
+  font-family: 'Andika', sans-serif;
+}
+
+#l:hover {
+  background-color: rgb(74, 241, 233);
+
+  box-shadow: 10px 5px 5px rgb(8, 255, 20);
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 175px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Andika&family=Playfair+Display:ital,wght@1,600&display=swap"
+    rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Drum Kit</title>
+
+</head>
+
+<body>
+  <script>
+    function j() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
+    function l() {
+      var audio = document.getElementById("l");
+      audio.play();
+    }
+    function k() {
+      var audio = document.getElementById("k");
+      audio.play();
+    }
+    function w() {
+      var audio = document.getElementById("w");
+      audio.play();
+    }
+    function a() {
+      var audio = document.getElementById("a");
+      audio.play();
+    }
+    function s() {
+      var audio = document.getElementById("s");
+      audio.play();
+    }
+    function d() {
+      var audio = document.getElementById("d");
+      audio.play();
+    }
+    function play() {
+      var audio = document.getElementById("p");
+      audio.play();
+    }
+    function stop() {
+      var audio = document.getElementById("p");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
+
+
+  <audio id="audio" src="task-08_sounds_snare.mp3"></audio>
+  <audio id="l" src="task-08_sounds_kick-bass.mp3"></audio>
+  <audio id="k" src="task-08_sounds_crash.mp3"></audio>
+  <audio id="w" src="task-08_sounds_tom-1.mp3"></audio>
+  <audio id="a" src="task-08_sounds_tom-2.mp3"></audio>
+  <audio id="s" src="task-08_sounds_tom-3.mp3"></audio>
+  <audio id="d" src="task-08_sounds_tom-4.mp3"></audio>
+
+  <audio id="p" src="Nadan Chenda Melam ! Kerala Nadan Chenda Melam ! Chenda Melam.mp3"></audio>
+  <h1 class="wiggle" onmouseenter="play()" && onmouseleave="stop()">Drum 🥁 Kit</h1>
+  <div class="set">
+    <button class="w drum" id="w" onclick="w()">w</button>
+    <button class="a drum" id="a" onclick="a()">a</button>
+    <button class="s drum" id="s" onclick="s()">s</button>
+    <button class="d drum" id="d" onclick="d()">d</button>
+    <button class="j drum" id="j" onclick="j()">j</button>
+    <button class="k drum" id="k" onclick="k()">k</button>
+    <button class="l drum" id="l" onclick="l()">l</button>
+  </div>
+
+</body>
+
+</html>
