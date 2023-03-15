@@ -7,7 +7,7 @@
 | [Task 4](https://github.com/RyzenGG6/-amFOSS_tasks/tree/master/TASK%204) |  Cine Bot |  	Completed |
 |[Task 5](https://github.com/RyzenGG6/-amFOSS_tasks/tree/master/TASK%205) |  Find The Bug |  Completed |
 | [Task 6](https://github.com/RyzenGG6/-amFOSS_tasks/tree/master/TASK%206) |  Flame Game |  	Completed |
-|[Task 7](https://github.com/RyzenGG6/-amFOSS_tasks/tree/master/TASK%207) |  Go WASM |  Learned and Attempted |
+|Task 7 |  Go WASM |  Learned and just attempted |
 | [Task 8](https://github.com/RyzenGG6/-amFOSS_tasks/tree/master/TASK%208) |  Internet Explorer |  	Completed |
 |[Task 9](https://github.com/RyzenGG6/-amFOSS_tasks/tree/master/TASK%209) |  Krypto Scrapper |  Completed |
 | [Task 10](https://github.com/RyzenGG6/-amFOSS_tasks/tree/master/TASK%210) |  CS50 |  	Completed |
