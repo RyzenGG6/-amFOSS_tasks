@@ -1,49 +1,34 @@
-import 'package:flame/components.dart';
-import 'package:flutter/services.dart';
+import 'package:bunny/bunny_game.dart';
 import 'package:flame/game.dart';
-import 'package:flame/palette.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:bunny/helpers/navigation_keys.dart';
+import 'package:flame/flame.dart';
 
-void main() {
-  print('loading the game widgets');
-  runApp(GameWidget(game: MyGame()));
-  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
-  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Flame.device.fullScreen();
+  await Flame.device.setLandscape();
+
+  final game = BunnyGame();
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Stack(
+          children: [
+            GameWidget(
+              game: game,
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: NavigationKeys(
+                onDirectionChanged: game.onArrowKeyChanged,
+              ),
+            )
+          ],
+        ),
+      ),
+    ),
+  );
 }
-class MyGame extends FlameGame with HasDraggables {
-  SpriteComponent bunny = SpriteComponent();
-  SpriteComponent background = SpriteComponent();
-  final Vector2 buttonSize = Vector2(50, 50);
-  final double charactersize = 175;
-  @override
-  late final JoystickComponent joystick;
 
-
-  Future<void> onLoad() async {
-    super.onLoad();
-    final screenWidth = size;
-    final screenHeight = size;
-    add(background);
-      ..sprite = await loadSprite('background.png')
-      ..size = size);
-    bunny
-      ..sprite = await loadSprite('bunny.png')
-      ..size = Vector2(charactersize, charactersize)
-      ..x = 300
-      ..y = 200;
-    add(bunny);
-    final knobPaint = BasicPalette.blue.withAlpha(200).paint();
-    final backgroundPaint = BasicPalette.white.withAlpha(100).paint();
-    joystick = JoystickComponent(
-      knob: CircleComponent(radius: 18, paint: knobPaint),
-      background: CircleComponent(radius: 50, paint: backgroundPaint),
-      margin: const EdgeInsets.only(left: 40, bottom: 40),);
-    add(joystick);
-  }
-
-  @override
-  update(double dt) {
-    super.update(dt);
-    bunny.position.add(joystick.relativeDelta * 200 * dt);
-  }
-}
