@@ -1,0 +1,1 @@
+All of the questions were pretty known to me, but I could only answer four of them accurately based on the desired outcome. had got the logic very easily but was hard to implementI spent around a week on four problems and tried to figure out the remaining answers in two weeks but did not obtain the desired results.
