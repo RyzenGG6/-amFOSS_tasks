@@ -4,15 +4,17 @@ import requests
 import json
 import csv
 import csv,io
+from dotenv import load_dotenv
 
+# Load the environment variables from the .env file
+load_dotenv()
 
 
 # TODO: 1.1 Get your environment variables 
-os.environ['key']="6efcee06"
-yourkey = os.getenv("6efcee06")
-bot_id = os.getenv("5666650491:AAHe_JbJXexZkpJh9nIyFkR8uf_GI3miHwE")
+yourkey = os.getenv("api_key")
+bot_id = os.getenv("bot_id")
 
-bot = telebot.TeleBot("5666650491:AAHe_JbJXexZkpJh9nIyFkR8uf_GI3miHwE")
+bot = telebot.TeleBot(bot_id)
 s = io.StringIO()
 buf = io.BytesIO()
 botRunning = True
